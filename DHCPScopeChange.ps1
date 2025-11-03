@@ -72,7 +72,7 @@ foreach ($scope in $scopes) {
 $logEntries | Export-Csv -Path $logFile -NoTypeInformation -Force
  
 # Summary
-Write-Host "`nSummary:"
+Write-Host "Summary:"
 Write-Host "Scopes processed: $($scopes.Count)"
 Write-Host "Scopes changed: $changedCount"
 Write-Host "Scopes skipped: $skippedCount"
