@@ -16,7 +16,7 @@ $DhcpServers = Get-DhcpServerInDC | Select-Object -ExpandProperty DnsName  # aut
 
 # Create timestamped folder under user profile
 $timestamp = (Get-Date).ToString("yyyyMMdd_HHmmss")
-$ReportFolder = Join-Path $env:USERPROFILE ("DHCP Report $timestamp")
+$ReportFolder = Join-Path $env:USERPROFILE\Desktop ("DHCP Report $timestamp")
 New-Item -Path $ReportFolder -ItemType Directory -Force | Out-Null
 
 $CsvPath  = Join-Path $ReportFolder "DHCP_Inventory_$timestamp.csv"
