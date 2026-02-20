@@ -1,4 +1,5 @@
 # Dynamically pulling the DHCP servers in a Active Directory domain
+# Install ADEssentials - Install-Module ADEssentials -Force -Verbose
 $DHCP_Servers = Get-DhcpServerInDC | Sort-Object -Property DnsName
 $Output = Foreach ($DHCP_Server in $DHCP_Servers) {
     # Going through the DHCP servers that were returned one at a time to pull statistics
