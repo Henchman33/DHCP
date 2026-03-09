@@ -1,4 +1,5 @@
 Import-Module PSWriteHTML # <-- Module Requied to run Report
+Install-Module PSWriteHTML # <-- Module Requied to run Report
 
 $DHCP_Servers = Get-DhcpServerInDC | Sort-Object -Property DnsName
 $Output = Foreach ($DHCP_Server in $DHCP_Servers) {
